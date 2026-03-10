@@ -1,0 +1,52 @@
+{
+  "name": "bashdog-mcp",
+  "version": "1.0.1",
+  "description": "MCP Server for bash.dog - Submit and browse funny AI quotes",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "bash-dog-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --shims",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --shims --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "quotes",
+    "bash",
+    "funny"
+  ],
+  "author": "bash.dog",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medelin/bashdog-mpc"
+  },
+  "bugs": {
+    "url": "https://github.com/medelin/bashdog-mpc/issues"
+  },
+  "homepage": "https://bash.dog",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
